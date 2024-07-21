@@ -5,12 +5,9 @@ task 4: Use esp32 along with light sensor and motion sensor and connect them to 
 3) if there is light but no motion = turn light off.
 
 ## Demo
-<img width="1396" alt="Screen Shot 1446-01-16 at 12 16 16 AM" src="https://github.com/user-attachments/assets/896fef47-4afa-4aeb-a51c-68d5f83b3a42">
+<img width="1397" alt="Screen Shot 1446-01-16 at 12 50 37 AM" src="https://github.com/user-attachments/assets/9e83d444-08dc-4413-9ff9-0c3c261823af">
 
-<img width="1407" alt="Screen Shot 1446-01-16 at 12 16 29 AM" src="https://github.com/user-attachments/assets/3d0f6a0e-3192-4456-b91f-8591f221ff95">
-
-<img width="1390" alt="Screen Shot 1446-01-16 at 12 18 19 AM" src="https://github.com/user-attachments/assets/b9b7b2fb-ef34-4288-a71d-e36612af83f9">
-
+<img width="1399" alt="Screen Shot 1446-01-16 at 12 50 49 AM" src="https://github.com/user-attachments/assets/769f577b-10a6-4933-985f-12c540b19e4d">
 ## Components
 
 - ESP32
