@@ -4,6 +4,7 @@ task 4: Use esp32 along with light sensor and motion sensor and connect them to 
 2) if no light and no motion = led off
 3) if there is light but no motion = turn light off.
 
+### Demo
 
 ## Components
 
@@ -20,19 +21,17 @@ task 4: Use esp32 along with light sensor and motion sensor and connect them to 
 - **VCC**: Connect to `5V` on ESP32
 - **GND**: Connect to `GND` on ESP32
 - **IN**: Connect to `GPIO 4` on ESP32
-- **NO (Normally Open)**: Connect one end of the LED
+- **NO (Normally Open)**: Connect to anode of the LED
 - **COM (Common)**: Connect to a suitable power source (e.g., `5V`)
 
-### Light Sensor (LDR)
-- **One end**: Connect to `3V3` on ESP32
-- **Other end**: Connect to one side of a 10k ohm resistor
-- **Junction (LDR and resistor)**: Connect to `GPIO 36` (Analog pin VP) on ESP32
-- **Other side of the resistor**: Connect to `GND`
-
+### LED
+- **Anode (positive lead)**: Connect to relay NO (Normally Open)
+- **Cathode (negative lead)**: Connect to `GND` on ESP32 
+- 
 ### PIR Sensor
 - **VCC**: Connect to `3V3` on ESP32
 - **GND**: Connect to `GND` on ESP32
-- **OUT**: Connect to `GPIO 15` on ESP32
+- **OUT**: Connect to `GPIO 14` on ESP32
 
 ## Why We Use a Relay
 
@@ -41,10 +40,10 @@ A relay is an electrically operated switch that allows you to control a high-pow
 ## Code
 
 ```cpp
-#define PIR_PIN 15
+#define PIR_PIN 14
 #define RELAY_PIN 4
 #define LDR_PIN 36  // Analog pin (VP is GPIO 36)
-#define ANALOG_THRESHOLD 800
+
 
 void setup() {
   pinMode(PIR_PIN, INPUT);
@@ -61,11 +60,14 @@ void loop() {
   Serial.print("LDR Value: ");
   Serial.println(ldrValue);
 
-  if (pirValue == HIGH && ldrValue < ANALOG_THRESHOLD) { // Movement detected and it's dark
+  if (pirValue == HIGH ) { // Movement detected 
     digitalWrite(RELAY_PIN, HIGH); // Turn on the light
   } else {
     digitalWrite(RELAY_PIN, LOW); // Turn off the light
   }
 
-  delay(1000); // Check every second
+  delay(1000); 
 }
+```
+
+
