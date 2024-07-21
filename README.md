@@ -1,5 +1,5 @@
 # sm-electronics-relay-esp32-task4
-task 4: Use esp32 along with light sensor and motion sensor and connect them to relay so that 
+Task 4: Use esp32 along with light sensor and motion sensor and connect them to relay so that 
 1) if no light detected but there is motion = turn light on
 2) if no light and no motion = led off
 3) if there is light but no motion = turn light off.
