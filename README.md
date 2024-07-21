@@ -9,6 +9,8 @@ Task 4: Use esp32 along with light sensor and motion sensor and connect them to 
 
 <img width="700" alt="Screen Shot 1446-01-16 at 12 50 49 AM" src="https://github.com/user-attachments/assets/769f577b-10a6-4933-985f-12c540b19e4d">
 
+https://wokwi.com/projects/404055323856716801
+
 ## Components
 
 - ESP32
